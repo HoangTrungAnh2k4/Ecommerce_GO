@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
+	"github.com/HoangTrungAnh2k4/Ecommerce_GO/internal/routers"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
+	r := routers.NewRouter()
+	r.Run()
 }
