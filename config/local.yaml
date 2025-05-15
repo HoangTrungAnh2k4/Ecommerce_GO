@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  host: localhost
+  protocol: http
+
+database:
+  host: localhost
+  port: 5432
+  user: user
+  password: password
+  name: database_name
+
+security:
+  jwt:
+    secret: your_jwt_secret
+    expiration: 3600
