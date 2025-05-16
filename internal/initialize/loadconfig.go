@@ -1,3 +1,4 @@
+// initialize/config.go
 package initialize
 
 import (
@@ -7,14 +8,14 @@ import (
 )
 
 func LoadConfig() {
-	viper := viper.New()
 	viper.AddConfigPath("./config")
 	viper.SetConfigName("local")
 	viper.SetConfigType("yaml")
 
-	// read file config
-	err := viper.ReadInConfig()
-	if err != nil {
+	// Đọc file config
+	if err := viper.ReadInConfig(); err != nil {
 		panic(fmt.Errorf("fatal error config file: %s \n", err))
 	}
+
+	fmt.Println("Loaded port:", viper.Get("server.port")) // Debug
 }

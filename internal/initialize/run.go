@@ -2,12 +2,12 @@ package initialize
 
 func Run() {
 	LoadConfig()
+	// port := viper.GetString("server.port")
+	// fmt.Println("Server starting at port", port)
 
 	InitLogger()
 
-	InitMySQL()
-
 	r := InitRouter()
 
-	r.Run("3002")
+	r.Run()
 }
